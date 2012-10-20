@@ -1,0 +1,38 @@
+# This file is ~/.gitconfig
+[user]
+	name = Aldric Giacomoni
+	email = trevoke@gmail.com
+
+[alias]
+  st = status
+  rso = remote show origin
+  # e.g. git graphviz --first-parent master | dotty /dev/stdin
+  graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+  # Pretty log
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  # Print out all commits whose hash starts with a given string
+  abbr = "!sh -c 'git rev-list --all | grep ^$1 | while read commit; do git --no-pager log -n1 --pretty=format:\"%H %ci %an %s%n\" $commit; done' -"
+  # Two little tweaks to diff
+  changes=diff --name-status -r
+  diffstat=diff --stat -r
+
+[giggle]
+  main-window-maximized = false
+  main-window-geometry = 1007x898+617+126
+  main-window-view = HistoryView
+  file-view-vpane-position = 185
+  history-view-vpane-position = 572
+[push]
+  default = current
+[pull]
+  default = current
+[core]
+	excludesfile = /Users/alg/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[color]
+	ui = auto
