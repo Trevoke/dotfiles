@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/golden-ratio"]
 	path = .vim/bundle/golden-ratio
 	url = git://github.com/vim-scripts/golden-ratio.git
+[submodule ".vim/bundle/taglist"]
+	path = .vim/bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git
