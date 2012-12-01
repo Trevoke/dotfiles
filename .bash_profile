@@ -1,3 +1,6 @@
+source ~/bin/bash_colors.sh
+source ~/bin/git-completion.bash
+
 alias ls="ls -G"
 alias la="ls -a"
 alias ll="ls -lh"
@@ -36,8 +39,6 @@ grb_git_prompt() {
     fi
 }
 PS1="\h:\W\$(grb_git_prompt) \u\$ "
-
-source ~/bin/git-completion.bash
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 source ~/.bashrc
