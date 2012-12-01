@@ -64,3 +64,6 @@
 [submodule ".vim/bundle/taglist"]
 	path = .vim/bundle/taglist
 	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule ".vim/bundle/vim-pad"]
+	path = .vim/bundle/vim-pad
+	url = git://github.com/fmoralesc/vim-pad.git
