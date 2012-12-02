@@ -6,9 +6,9 @@ if has("win32")
 elseif has("gui_win32")
   "Another non-sequitur today
 elseif has("gui_macvim") || has("gui_mac")
-  set guifont="Monaco:h16"
+  set guifont=Monaco:h16
 else
-  set guifont="DejaVu Sans Mono:h15"
+  set guifont=DejaVu\ Sans\ Mono:h16
 endif
 
 

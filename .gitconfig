@@ -4,6 +4,7 @@
 	email = trevoke@gmail.com
 
 [alias]
+  s = status -s
   st = status
   sm = submodule
   rso = remote show origin
@@ -16,6 +17,7 @@
   # Two little tweaks to diff
   changes=diff --name-status -r
   diffstat=diff --stat -r
+  la = "!git config -l | grep alias | cut -c 7-"
 
 [giggle]
   main-window-maximized = false
