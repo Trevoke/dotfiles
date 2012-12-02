@@ -39,3 +39,5 @@
 	trustExitCode = true
 [color]
 	ui = auto
+[init]
+	templatedir = /Users/aldric/.git_template
