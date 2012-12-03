@@ -44,9 +44,11 @@ noremap <F1> <Esc>
 " vim-statline (:help statline)
 let g:statline_fugitive = 1
 
-" taglist
-let Tlist_Ctags_Cmd = "/usr/local/bin/ctags" "ctags command
-let Tlist_WinWidth = 50 "width of ctags window
+" tagbar
+let g:tagbar_left = 1
+let g:tagbar_width = 30
+let g:tagbar_show_visibility = 1
+let g:tagbar_iconchars = ['▾', '▸'] 
 "toggle ctags window with "F4"
 map <F4> :TagbarToggle<CR> 
 "build ctags with "F8"
