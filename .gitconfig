@@ -40,4 +40,4 @@
 [color]
 	ui = auto
 [init]
-	templatedir = /Users/aldric/.git_template
+	templatedir = ~/.git_template
