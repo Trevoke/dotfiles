@@ -73,3 +73,9 @@
 [submodule ".vim/bundle/vim-bundler"]
 	path = .vim/bundle/vim-bundler
 	url = https://github.com/tpope/vim-bundler.git
+[submodule ".tmux/tmux-powerline"]
+	path = .tmux/tmux-powerline
+	url = git://github.com/erikw/tmux-powerline.git
+[submodule ".tmux/tmux-solarized"]
+	path = .tmux/tmux-solarized
+	url = git://github.com/seebi/tmux-colors-solarized.git
