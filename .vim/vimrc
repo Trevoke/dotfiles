@@ -40,6 +40,9 @@ nnoremap <leader><space> :noh<CR>
 "The Esc key just gets smaller and smaller...
 noremap <F1> <Esc>
 
+imap jk <Esc>
+imap kj <Esc>
+
 set backspace=indent,eol,start
 
 " vim-statline (:help statline)
