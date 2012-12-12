@@ -37,9 +37,10 @@ map <leader>w :w!<CR>
 " use Leader "space" to clear out the search results highlighting
 nnoremap <leader><space> :noh<CR>
 
-" Please don't try to help me. The Esc key just gets smaller and smaller...
-" And sometimes I am not using Ctrl-[ to go back to Normal mode.
+"The Esc key just gets smaller and smaller...
 noremap <F1> <Esc>
+
+set backspace=indent,eol,start
 
 " vim-statline (:help statline)
 let g:statline_fugitive = 1
