@@ -13,6 +13,16 @@ PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 autoload -U compinit && compinit
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+zstyle ':completion:*' completer \
+  _complete _correct _approximate
+zstyle ':completion:incremental:*' completer \
+  _complete _correct
+zstyle ':completion:predict:*' completer \
+  _complete
+
+setopt correct
+
+export TERM=xterm-256color
 autoload -U colors && colors
 PROMPT=$(print "\n%{$fg[yellow]%}%D %*%{$reset_color%}\n%{$fg[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %2~ %# ")
 
