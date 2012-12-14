@@ -7,10 +7,6 @@ filetype plugin indent on
 set t_Co=256
 colorscheme jellybeans
 
-" Define "," as the "Leader" character (:help leader)
-let mapleader = ","
-let g:mapleader = ","
-
 " Ruby <3 : tab = 2 spaces
 set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2
@@ -31,6 +27,14 @@ set incsearch " Highlight search as you type
 set ignorecase " Searches ignore case
 set smartcase " Searching for 'a/Bc'  matches 'aBc' not 'abc'
 
+set backspace=indent,eol,start
+
+" KEYMAPPINGS
+"
+" Define "," as the "Leader" character (:help leader)
+let mapleader = ","
+let g:mapleader = ","
+
 " Fast saving with Leader "w"
 map <leader>w :w!<CR>
 
@@ -39,11 +43,14 @@ nnoremap <leader><space> :noh<CR>
 
 "The Esc key just gets smaller and smaller...
 noremap <F1> <Esc>
-
+" And maybe I don't want to hit it at all.
 imap jk <Esc>
 imap kj <Esc>
 
-set backspace=indent,eol,start
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
 
 " vim-statline (:help statline)
 let g:statline_fugitive = 1
