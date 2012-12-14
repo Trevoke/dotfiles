@@ -79,3 +79,6 @@
 [submodule ".tmux/tmux-solarized"]
 	path = .tmux/tmux-solarized
 	url = git://github.com/seebi/tmux-colors-solarized.git
+[submodule ".vim/bundle/gentooish"]
+	path = .vim/bundle/gentooish
+	url = git://github.com/briancarper/gentooish.vim.git
