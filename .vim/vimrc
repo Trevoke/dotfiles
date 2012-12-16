@@ -51,6 +51,13 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
+" END KEYMAPPINGS
+
+" Ruby
+let g:rubycomplete_rails = 1
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_buffer_loading = 1
+" End ruby
 
 " vim-statline (:help statline)
 let g:statline_fugitive = 1
