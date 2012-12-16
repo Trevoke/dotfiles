@@ -1,4 +1,8 @@
 I use the dotify gem / Ruby script to manage my dotfiles and other *nix-y configuration. It's quite handy.
 
 If you are on OSX, you will have to do something like:
-brew install grep vim bash zsh zsh-completions git tmux
+    brew install grep vim bash zsh zsh-completions git tmux
+
+The zsh-git-prompt submodule requires a modification to the zshrc.sh file.
+If none of the config changes for you, the new line is:
+    export __GIT_PROMPT_DIR=~/bin/zsh/git-prompt

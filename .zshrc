@@ -22,9 +22,11 @@ zstyle ':completion:predict:*' completer \
 
 setopt correct
 
+source ~/bin/zsh/git-prompt/zshrc.sh
 export TERM=xterm-256color
 autoload -U colors && colors
 PROMPT=$(print "\n%{$fg[yellow]%}%D %*%{$reset_color%}\n%{$fg[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %2~ %# ")
+RPROMPT="$(git_super_status)"
 
 alias ls="ls -G"
 alias g="git status"
