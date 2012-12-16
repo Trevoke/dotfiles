@@ -1,5 +1,5 @@
-source ~/bin/bash_colors.sh
-source ~/bin/git-completion.bash
+source ~/bin/bash/colors.sh
+source ~/bin/bash/git-completion.sh
 
 alias ls="ls -G"
 alias la="ls -a"
