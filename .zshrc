@@ -7,7 +7,7 @@ export HISTFILE=~/.zhistory
 # append command to history file once executed
 setopt inc_append_history
 
-cdpath=(~ ~/Documents/Code ~/Downloads)
+cdpath=(. ~ ~/Documents/Code ~/Downloads)
 PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 autoload -U compinit && compinit
