@@ -19,9 +19,6 @@
 [submodule ".vim/bundle/solarized"]
 	path = .vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule ".vim/bundle/statline"]
-	path = .vim/bundle/statline
-	url = https://github.com/millermedeiros/vim-statline.git
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
