@@ -29,6 +29,7 @@ PROMPT=$(print "\n%{$fg[yellow]%}%D %*%{$reset_color%}\n%{$fg[blue]%}%n%{$reset_
 RPROMPT=$'$(git_super_status)'
 
 alias ls="ls -G"
+alias la="ls -a"
 alias g="git status"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
