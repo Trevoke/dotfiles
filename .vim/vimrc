@@ -59,10 +59,9 @@ let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_buffer_loading = 1
 " End ruby
 
-" vim-statline (:help statline)
-let g:statline_fugitive = 1
-
-let g:Powerline_symbols = 'fancy'
+set laststatus=2
+source /Users/aldric/.vim/bundle/powerline/powerline/ext/vim/powerline.vim
+" let g:Powerline_symbols = 'fancy'
 
 " tagbar
 let g:tagbar_left = 1
