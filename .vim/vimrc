@@ -62,6 +62,8 @@ let g:rubycomplete_buffer_loading = 1
 " vim-statline (:help statline)
 let g:statline_fugitive = 1
 
+let g:Powerline_symbols = 'fancy'
+
 " tagbar
 let g:tagbar_left = 1
 let g:tagbar_width = 30
