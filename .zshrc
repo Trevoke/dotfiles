@@ -23,13 +23,14 @@ zstyle ':completion:predict:*' completer \
 setopt correct
 
 source ~/bin/zsh/git-prompt/zshrc.sh
-export TERM=xterm-256color
+export TERM=screen-256color
 autoload -U colors && colors
 PROMPT=$(print "\n%{$fg[yellow]%}%D %*%{$reset_color%}\n%{$fg[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %2~ %# ")
 RPROMPT=$'$(git_super_status)'
 
 alias ls="ls -G"
 alias la="ls -a"
+alias tmux="tmux -2"
 alias g="git status"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
