@@ -29,6 +29,7 @@ PROMPT=$(print "\n%{$fg[yellow]%}%D %*%{$reset_color%}\n%{$fg[blue]%}%n%{$reset_
 RPROMPT=$'$(git_super_status)'
 
 alias ls="ls -G"
+alias l="ls"
 alias la="ls -a"
 alias tmux="tmux -2"
 alias g="git status"
