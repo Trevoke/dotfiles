@@ -10,15 +10,32 @@ setopt inc_append_history
 cdpath=(. ~ ~/Documents/Code ~/Downloads)
 PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
-autoload -U compinit && compinit
-fpath=(/usr/local/share/zsh-completions $fpath)
+zstyle ':completion:*' completer _list _oldlist _expand _complete _ignored _correct _prefix
+zstyle ':completion:*' completions 1
+zstyle ':completion:*' expand prefix suffix
+zstyle ':completion:*' file-sort access
+zstyle ':completion:*' format 'Scanning %d'
+zstyle ':completion:*' glob 1
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' ignore-parents parent pwd .. directory
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' list-suffixes true
+zstyle ':completion:*' match-original both
+zstyle ':completion:*' max-errors 1
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*' preserve-prefix '//[^/]##/'
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' squeeze-slashes true
+zstyle ':completion:*' substitute 1
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+zstyle :compinstall filename '/home/alg/.zshrc'
 
-zstyle ':completion:*' completer \
-  _complete _correct _approximate
-zstyle ':completion:incremental:*' completer \
-  _complete _correct
-zstyle ':completion:predict:*' completer \
-  _complete
+autoload -Uz compinit
+compinit
+
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 setopt correct
 
