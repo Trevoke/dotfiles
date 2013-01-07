@@ -60,7 +60,6 @@ let g:rubycomplete_buffer_loading = 1
 " End ruby
 
 set laststatus=2
-source ~/.vim/bundle/powerline/powerline/ext/vim/powerline.vim
 let g:Powerline_symbols = 'fancy'
 
 " tagbar
