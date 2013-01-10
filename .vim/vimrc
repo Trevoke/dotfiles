@@ -47,6 +47,9 @@ noremap <F1> <Esc>
 imap jk <Esc>
 imap kj <Esc>
 
+" Re-indent the entire file
+nmap <Leader>= magg=G`a
+
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
