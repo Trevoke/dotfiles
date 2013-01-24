@@ -65,6 +65,10 @@ let g:rubycomplete_buffer_loading = 1
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 
+" tab bar - fweep's plugin
+set showtabline=2
+set tabline=%!tabber#TabLine()
+
 " tagbar
 let g:tagbar_left = 1
 let g:tagbar_width = 30
