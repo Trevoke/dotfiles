@@ -76,9 +76,6 @@
 [submodule ".vim/bundle/gentooish"]
 	path = .vim/bundle/gentooish
 	url = git://github.com/briancarper/gentooish.vim.git
-[submodule "bin/zsh/git-prompt"]
-	path = bin/zsh/git-prompt
-	url = git://github.com/olivierverdier/zsh-git-prompt.git
 [submodule ".vim/bundle/commentary"]
 	path = .vim/bundle/commentary
 	url = git://github.com/tpope/vim-commentary.git
