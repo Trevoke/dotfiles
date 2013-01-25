@@ -94,6 +94,3 @@
 [submodule ".vim/bundle/vim-tabber"]
 	path = .vim/bundle/vim-tabber
 	url = git@github.com:fweep/vim-tabber.git
-[submodule ".vim/bundle/ultisnips"]
-	path = .vim/bundle/ultisnips
-	url = git://github.com/SirVer/ultisnips.git

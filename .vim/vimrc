@@ -69,6 +69,7 @@ let g:Powerline_symbols = 'fancy'
 set showtabline=2
 set tabline=%!tabber#TabLine()
 
+
 " tagbar
 let g:tagbar_left = 1
 let g:tagbar_width = 30
