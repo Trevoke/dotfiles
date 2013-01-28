@@ -1,5 +1,3 @@
-source /etc/zsh/git-flow-completion.zsh
-#
 # number of lines kept in history
 export HISTSIZE=10000
 # number of lines saved in the history after logout
@@ -32,7 +30,7 @@ zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' substitute 1
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/alg/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -41,9 +39,11 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 setopt correct
 
+source ~/bin/zsh/gentoo-prompt
 export TERM=screen-256color
 autoload -U colors && colors
 PROMPT=$(print "\n%{$fg[yellow]%}%D %*%{$reset_color%}\n%{$fg[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %2~ %# ")
+#RPROMPT=$'$(git_super_status)'
 
 alias ls="ls -G"
 alias l="ls"
