@@ -39,6 +39,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 setopt correct
 
+source ~/bin/zsh/gentoo-prompt
 export TERM=screen-256color
 autoload -U colors && colors
 PROMPT=$(print "\n%{$fg[yellow]%}%D %*%{$reset_color%}\n%{$fg[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %2~ %# ")
@@ -51,3 +52,4 @@ alias g="git status"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source ~/.profile
