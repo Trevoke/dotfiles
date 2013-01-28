@@ -47,6 +47,9 @@ noremap <F1> <Esc>
 imap jk <Esc>
 imap kj <Esc>
 
+" Re-indent the entire file
+nnoremap <Leader>= magg=G`a
+
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -60,8 +63,12 @@ let g:rubycomplete_buffer_loading = 1
 " End ruby
 
 set laststatus=2
-source ~/.vim/bundle/powerline/powerline/ext/vim/powerline.vim
 let g:Powerline_symbols = 'fancy'
+
+" tab bar - fweep's plugin
+set showtabline=2
+set tabline=%!tabber#TabLine()
+
 
 " tagbar
 let g:tagbar_left = 1

@@ -30,7 +30,7 @@ zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' substitute 1
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/alg/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
