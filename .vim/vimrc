@@ -29,6 +29,8 @@ set smartcase " Searching for 'a/Bc'  matches 'aBc' not 'abc'
 
 set backspace=indent,eol,start
 
+set foldmethod=indent
+
 " KEYMAPPINGS
 "
 " Define "," as the "Leader" character (:help leader)
