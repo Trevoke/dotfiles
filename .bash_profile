@@ -43,3 +43,5 @@ PS1="\h:\W\$(grb_git_prompt) \u\$ "
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 source ~/.profile
 source ~/.bashrc
+
+setxkbmap -option 'ctrl:nocaps'
