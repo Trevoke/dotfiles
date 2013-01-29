@@ -4,3 +4,5 @@
 *.sw[op]
 tags
 doc/tags
+cscope.files
+cscope.out
