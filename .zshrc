@@ -1,3 +1,8 @@
+ # Bah humbug at Gentoo
+ # And if you know me and you laughed reading this,
+ # bah humbug at you too.
+unset RUBYOPT
+
 # number of lines kept in history
 export HISTSIZE=10000
 # number of lines saved in the history after logout
@@ -53,3 +58,5 @@ alias g="git status"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source ~/.profile
+
+setxkbmap -option 'ctrl:nocaps'
