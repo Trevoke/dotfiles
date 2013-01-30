@@ -1,6 +1,6 @@
- # Bah humbug at Gentoo
- # And if you know me and you laughed reading this,
- # bah humbug at you too.
+# Bah humbug at Gentoo
+# And if you know me and you laughed reading this,
+# bah humbug at you too.
 unset RUBYOPT
 
 # number of lines kept in history
@@ -49,14 +49,21 @@ export TERM=screen-256color
 autoload -U colors && colors
 PROMPT=$(print "\n%{$fg[yellow]%}%D %*%{$reset_color%}\n%{$fg[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %2~ %# ")
 
-alias ls="ls -G"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source ~/.profile
+
+OS_TYPE=`uname -s`
+if [[ $OS_TYPE == 'Linux' ]]; then
+  setxkbmap -option 'ctrl:nocaps'
+  alias ls="ls --color"
+elif [[ $OS_TYPE == 'Darwin' ]]; then 
+  alias ls="ls -G"
+fi
+
 alias l="ls"
 alias la="ls -a"
 alias tmux="tmux -2"
 alias g="git status"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source ~/.profile
-
-setxkbmap -option 'ctrl:nocaps'
+unset OS_TYPE
