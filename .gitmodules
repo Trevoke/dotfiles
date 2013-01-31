@@ -97,3 +97,6 @@
 [submodule ".vim/bundle/ultisnips-rspec"]
 	path = .vim/bundle/ultisnips-rspec
 	url = git@github.com:Trevoke/ultisnips-rspec.git
+[submodule "bin/git_chrono"]
+	path = bin/git_chrono
+	url = git://github.com/balefrost/git-chrono.git
