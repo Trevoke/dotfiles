@@ -30,6 +30,7 @@ set smartcase " Searching for 'a/Bc'  matches 'aBc' not 'abc'
 set backspace=indent,eol,start
 
 set foldmethod=indent
+set nofoldenable
 
 " set title on window if possible
 set title
