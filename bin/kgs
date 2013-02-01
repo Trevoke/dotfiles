@@ -1,0 +1,3 @@
+#!/bin/bash
+
+javaws /home/alg/Software/KGS/cgoban-nfa.jnlp
