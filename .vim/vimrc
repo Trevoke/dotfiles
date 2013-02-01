@@ -29,6 +29,7 @@ set smartcase " Searching for 'a/Bc'  matches 'aBc' not 'abc'
 
 set backspace=indent,eol,start
 
+"folds
 set foldmethod=indent
 set nofoldenable
 
@@ -117,3 +118,8 @@ func! ToggleColorColumn()
         echo '80 column marker on'
     endif    
 endfunc
+
+" Miscellaneous support
+"
+" Read JSON data as Javascript
+autocmd BufNewFile,BufRead *.json set ft=javascript
