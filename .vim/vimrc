@@ -96,13 +96,20 @@ map <F4> :TagbarToggle<CR>
 "build ctags with "F8"
 map <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
+let g:pad_dir = "~/Google\ Drive/vimpad"
+
+" sweet-rspec
+map <Leader>R :SweetVimRspecRunFile<CR>
+map <Leader>r :SweetVimRspecRunFocused<CR>
+map <Leader>. :SweetVimRspecRunPrevious<CR>
+let $SWEET_VIM_RSPEC_SHOW_PASSING = "true"
+let g:SweetVimRspecUseBundler = 1
+
 " "zz" now puts the line 10% above the middle of the screen instead of dead
 " center
 if has('float')
   nnoremap <silent> zz :exec "normal! zz" . float2nr(winheight(0)*0.1) . "\<Lt>C-E>"<CR>
 endif
-
-let g:pad_dir = "~/Google\ Drive/vimpad"
 
 " Toggle column to check 80-char limit
 nnoremap <F2> :call ToggleColorColumn()<CR>
@@ -119,7 +126,5 @@ func! ToggleColorColumn()
     endif    
 endfunc
 
-" Miscellaneous support
-"
 " Read JSON data as Javascript
 autocmd BufNewFile,BufRead *.json set ft=javascript
