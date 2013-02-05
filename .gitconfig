@@ -5,6 +5,7 @@
 
 [alias]
   s = status -s
+  aa = add --all
   st = status
   sm = submodule
   rso = remote show origin
