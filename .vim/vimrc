@@ -38,7 +38,7 @@ set title
 
 " file/command completion, like a shell
 set wildmenu
-set wildmode=list:longest
+set wildmode=list:longest:full
 
 " KEYMAPPINGS
 "
