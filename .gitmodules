@@ -115,3 +115,9 @@
 [submodule ".vim/bundle/c.vim"]
 	path = .vim/bundle/c.vim
 	url = https://github.com/vim-scripts/c.vim.git
+[submodule ".vim/bundle/refactoring-ruby"]
+	path = .vim/bundle/refactoring-ruby
+	url = git://github.com/ecomba/vim-ruby-refactoring.git
+[submodule ".vim/bundle/vividchalk"]
+	path = .vim/bundle/vividchalk
+	url = git://github.com/tpope/vim-vividchalk.git
