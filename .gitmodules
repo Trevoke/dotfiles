@@ -127,3 +127,6 @@
 [submodule ".vim/bundle/ack.vim"]
 	path = .vim/bundle/ack.vim
 	url = git://github.com/mileszs/ack.vim.git
+[submodule ".vim/bundle/haskellmode"]
+	path = .vim/bundle/haskellmode
+	url = git://github.com/lukerandall/haskellmode-vim.git
