@@ -87,16 +87,13 @@
 	url = git://github.com/ervandew/supertab.git
 [submodule ".vim/bundle/vim-powerline"]
 	path = .vim/bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
-[submodule ".vim/bundle/vim-tabber"]
-	path = .vim/bundle/vim-tabber
-	url = git@github.com:fweep/vim-tabber.git
+	url = git://github.com/Lokaltog/vim-powerline.gitNo wr
 [submodule ".vim/bundle/ultisnips"]
 	path = .vim/bundle/ultisnips
 	url = git://github.com/vim-scripts/UltiSnips.git
 [submodule ".vim/bundle/ultisnips-rspec"]
 	path = .vim/bundle/ultisnips-rspec
-	url = git@github.com:Trevoke/ultisnips-rspec.git
+	url = git://github.com/Trevoke/ultisnips-rspec.git
 [submodule "bin/git_chrono"]
 	path = bin/git_chrono
 	url = git://github.com/balefrost/git-chrono.git
