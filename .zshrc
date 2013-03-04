@@ -12,6 +12,16 @@ export HISTFILE=~/.zhistory
 # append command to history file once executed
 setopt inc_append_history
 
+bindkey -e
+bindkey '\e[H' beginning-of-line
+bindkey '\e[F' end-of-line
+bindkey '\e[5~' history-beginning-search-backward
+bindkey '\e[6~' history-beginning-search-forward
+bindkey '\e[1;3D' emacs-backward-word
+bindkey '\e[1;3C' emacs-forward-word
+bindkey '\e[3~' delete-char
+bindkey '\e[3;3~' delete-word
+
 cdpath=(. ~ ~/Documents/Code ~/Downloads)
 PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
