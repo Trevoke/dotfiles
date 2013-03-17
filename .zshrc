@@ -1,7 +1,7 @@
 # Bah humbug at Gentoo
 # And if you know me and you laughed reading this,
 # bah humbug at you too.
-unset RUBYOPT
+#unset RUBYOPT
 
 # number of lines kept in history
 export HISTSIZE=10000
@@ -23,7 +23,9 @@ bindkey '\e[3~' delete-char
 bindkey '\e[3;3~' delete-word
 
 cdpath=(. ~ ~/Documents/Code ~/Downloads)
-PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+# Homebrew path
+export PATH=~/bin:$PATH:/usr/local/bin:/usr/local/sbin
+export PATH=$PATH:/usr/local/share/npm/bin
 
 zstyle ':completion:*' completer _list _oldlist _expand _complete _ignored _correct _prefix
 zstyle ':completion:*' completions 1
@@ -66,14 +68,21 @@ source ~/.profile
 OS_TYPE=`uname -s`
 if [[ $OS_TYPE == 'Linux' ]]; then
   setxkbmap -option 'ctrl:nocaps'
-  alias ls="ls --color"
 elif [[ $OS_TYPE == 'Darwin' ]]; then 
-  alias ls="ls -G"
 fi
+
 
 alias l="ls"
 alias la="ls -a"
 alias tmux="tmux -2"
 alias g="git status"
 
+LS_VERSION=`man ls -P cat | tail -1 | cut -d' ' -f 1`
+if [[  $LS_VERSION == 'GNU' ]]; then
+  alias ls="ls --color"
+elif [[ $LS_VERSION == 'BSD' ]]; then
+  alias ls="ls -G"
+fi
+
+unset LS_VERSION
 unset OS_TYPE
