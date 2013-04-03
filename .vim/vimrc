@@ -98,12 +98,6 @@ map <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 let g:pad_dir = "~/Google\ Drive/vimpad"
 
-" sweet-rspec
-map <Leader>R :SweetVimRspecRunFile<CR>
-map <Leader>r :SweetVimRspecRunFocused<CR>
-map <Leader>. :SweetVimRspecRunPrevious<CR>
-let g:SweetVimRspecUseBundler = 1
-
 " "zz" now puts the line 10% above the middle of the screen instead of dead
 " center
 if has('float')
