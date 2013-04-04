@@ -124,3 +124,6 @@
 [submodule ".vim/bundle/haskellmode"]
 	path = .vim/bundle/haskellmode
 	url = git://github.com/lukerandall/haskellmode-vim.git
+[submodule ".vim/bundle/dispatch"]
+	path = .vim/bundle/dispatch
+	url = git://github.com/tpope/vim-dispatch.git

@@ -75,6 +75,9 @@ let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_buffer_loading = 1
 " End ruby
 
+"vim-dispatch
+nnoremap <Leader>t :Dispatch<CR>
+
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 
