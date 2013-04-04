@@ -7,6 +7,10 @@ filetype plugin indent on
 set t_Co=256
 colorscheme jellybeans
 
+" Life's about choices
+set mouse=a
+set mousemodel=extend
+
 " Ruby <3 : tab = 2 spaces
 set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2
