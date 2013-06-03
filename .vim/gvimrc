@@ -1,4 +1,5 @@
 set background=light
+colorscheme jellybeans
 
 "Font choice will depend on the OS
 if has("win32")
@@ -11,7 +12,8 @@ else
   set guifont="DejaVu Sans Mono:h16"
 endif
 
-
-set guioptions-=T "I don't want a toolbar
-set guioptions-=m "I don't want a menu bar
+"I don't want a toolbar
+set guioptions-=T 
+ "I don't want a menu bar
+set guioptions-=m
 
