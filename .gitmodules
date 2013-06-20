@@ -127,3 +127,6 @@
 [submodule ".vim/bundle/dispatch"]
 	path = .vim/bundle/dispatch
 	url = git://github.com/tpope/vim-dispatch.git
+[submodule ".vim/bundle/tintin++"]
+	path = .vim/bundle/tintin++
+	url = git@github.com:vim-scripts/tintin.vim.git
