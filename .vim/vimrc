@@ -74,7 +74,9 @@ nnoremap <C-k> <C-w>k
 "vim-dispatch
 nnoremap <Leader>t :Dispatch<CR>
 
+set encoding=utf-8
 set laststatus=2
+set rtp+=~/devel/powerline/powerline/bindings/vim
 let g:Powerline_symbols = 'fancy'
 
 " tab bar - fweep's plugin
