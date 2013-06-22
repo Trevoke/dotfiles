@@ -124,3 +124,6 @@
 [submodule ".vim/bundle/tintin++"]
 	path = .vim/bundle/tintin++
 	url = git@github.com:vim-scripts/tintin.vim.git
+[submodule ".vim/bundle/syntastic-coffee"]
+	path = .vim/bundle/syntastic-coffee
+	url = git@github.com:vitaly/vim-syntastic-coffee.git
