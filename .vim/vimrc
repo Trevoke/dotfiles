@@ -142,6 +142,9 @@ autocmd FileType javascript setlocal tabstop=4 shiftwidth=4 softtabstop=4
 " Make
 autocmd FileType make setlocal noexpandtab
 
+" Coffeescript
+autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
 " Toggle column to check 80-char limit
 nnoremap <F2> :call ToggleColorColumn()<CR>
 
