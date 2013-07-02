@@ -127,3 +127,6 @@
 [submodule ".vim/bundle/syntastic-coffee"]
 	path = .vim/bundle/syntastic-coffee
 	url = git@github.com:vitaly/vim-syntastic-coffee.git
+[submodule ".vim/bundle/colorscheme-luna"]
+	path = .vim/bundle/colorscheme-luna
+	url = git@github.com:Pychimp/vim-luna.git
