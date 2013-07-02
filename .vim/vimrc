@@ -5,6 +5,8 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
+set ttimeoutlen=50
+
 set t_Co=256
 colorscheme jellybeans
 
