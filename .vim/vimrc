@@ -108,6 +108,7 @@ set laststatus=2
 
 " tab bar - fweep's plugin
 set showtabline=2
+let g:tabber_divider_style='compatible'
 set tabline=%!tabber#TabLine()
 
 let g:UltiSnipsExpandTrigger="<tab>"
