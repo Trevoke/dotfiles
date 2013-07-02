@@ -140,6 +140,11 @@ let ruby_operators = 1
 let ruby_space_errors = 1
 let ruby_fold = 1
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType eruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
+" Stylesheets
+autocmd FileType css setlocal tabstop=2 shiftwidth=2 softtabstop=2  foldmethod=indent
+autocmd FileType scss setlocal tabstop=2 shiftwidth=2 softtabstop=2 foldmethod=indent
 
 " Javascript
 autocmd BufNewFile,BufRead *.json set ft=javascript
