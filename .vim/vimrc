@@ -1,6 +1,7 @@
-"Confused? Remember that you can use :help <something>
+" Confused? Remember that you can use :help <something>
 
-call pathogen#infect() " Remember to call :Helptags to generate the vimhelpfiles
+" Remember to call :Helptags to generate the vimhelpfiles
+call pathogen#infect() 
 syntax on
 filetype plugin indent on
 
@@ -14,7 +15,7 @@ set mousemodel=extend
 set autoindent
 set expandtab
 
-"I like line numbers, relative to the cursor.
+" I like line numbers, relative to the cursor.
 :set rnu
 " Insert mode: absolute line numbers
 au InsertEnter * :set nu
@@ -29,6 +30,8 @@ set incsearch " Highlight search as you type
 set ignorecase " Searches ignore case
 set smartcase " Searching for 'a/Bc'  matches 'aBc' not 'abc'
 
+" I'm not super-intelligent and I like being able to delete further than I
+" typed.
 set backspace=indent,eol,start
 
 " I do not want a buffer to open pre-folded
@@ -53,9 +56,10 @@ map <leader>w :w!<CR>
 " use Leader "space" to clear out the search results highlighting
 nnoremap <leader><space> :noh<CR>
 
-"The Esc key just gets smaller and smaller...
+" The Esc key just gets smaller and smaller...
 nnoremap <F1> <Esc>
 inoremap <F1> <Esc>
+vnoremap <F1> <Esc>
 
 " And maybe I don't want to hit it at all.
 imap jk <Esc>
@@ -97,12 +101,12 @@ nnoremap <Leader>t :Dispatch<CR>
 
 set encoding=utf-8
 set laststatus=2
-set rtp+=~/devel/powerline/powerline/bindings/vim
-let g:Powerline_symbols = 'fancy'
+" set rtp+=~/devel/powerline/powerline/bindings/vim
+" let g:Powerline_symbols = 'fancy'
 
 " tab bar - fweep's plugin
 set showtabline=2
-" set tabline=%!tabber#TabLine()
+set tabline=%!tabber#TabLine()
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
