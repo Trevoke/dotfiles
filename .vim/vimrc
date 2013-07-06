@@ -158,8 +158,8 @@ autocmd FileType make setlocal noexpandtab
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Tintin++
-autocmd BufNewFile,BufRead *.dump set filetype=tintin
-autocmd FileType tt setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd BufNewFile,BufRead *.tin set filetype=tintin
+autocmd FileType tintin setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Toggle column to check 80-char limit
 nnoremap <F2> :call ToggleColorColumn()<CR>
