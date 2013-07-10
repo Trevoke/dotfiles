@@ -5,6 +5,7 @@
 
 [alias]
   s = status -s
+  co = checkout
   aa = add --all
   st = status
   sm = submodule
