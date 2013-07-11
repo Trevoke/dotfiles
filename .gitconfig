@@ -44,3 +44,5 @@
 	ui = auto
 [init]
 	templatedir = ~/.git_template
+[merge]
+	summary = true
