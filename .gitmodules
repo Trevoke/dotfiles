@@ -139,6 +139,3 @@
 [submodule ".vim/bundle/ag.vim"]
 	path = .vim/bundle/ag.vim
 	url = git@github.com:rking/ag.vim.git
-[submodule ".vim/bundle/you-complete-me"]
-	path = .vim/bundle/you-complete-me
-	url = git@github.com:Valloric/YouCompleteMe.git
