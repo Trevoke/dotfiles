@@ -20,6 +20,7 @@
   # Two little tweaks to diff
   changes=diff --name-status -r
   diffstat=diff --stat -r
+  pr = !sh -c 'git pull --rebase | [ $(grep \"up to date\" -c) -ne 1 ] && git diff $1@{1}..$1@{0} "$@" --color'
   la = "!git config -l | grep alias | cut -c 7-"
 
 [giggle]
