@@ -10,6 +10,7 @@
   st = status
   sm = submodule
   rso = remote show origin
+  pr = !sh -c 'git pull --rebase | [ $(grep \"up to date\" -c) -ne 1 ] && git diff $1@{1}..$1@{0} "$@" --color'
   # e.g. git graphviz --first-parent master | dotty /dev/stdin
   graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
   # Pretty log
