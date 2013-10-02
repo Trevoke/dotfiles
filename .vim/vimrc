@@ -133,15 +133,21 @@ if has('float')
 endif
 
 " Ruby
-let g:rubycomplete_rails = 1
-let g:rubycomplete_classes_in_global = 1
-let g:rubycomplete_buffer_loading = 1
-let ruby_minlines = 300
-let ruby_operators = 1
-let ruby_space_errors = 1
-let ruby_fold = 1
+autocmd FileType ruby let g:SuperTabDefaultCompletionType = "context"
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let ruby_minlines = 300
+autocmd FileType ruby,eruby let ruby_operators = 1
+autocmd FileType ruby,eruby let ruby_space_errors = 1
+autocmd FileType ruby,eruby let ruby_fold = 1
+
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType eruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
+" improve autocomplete menu color
+highlight Pmenu ctermbg=238 gui=bold
 
 " Stylesheets
 autocmd FileType css setlocal tabstop=2 shiftwidth=2 softtabstop=2  foldmethod=indent
