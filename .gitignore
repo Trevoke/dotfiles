@@ -1,0 +1,7 @@
+.emacs.d/auto-save-list
+.emacs.d/elpa
+.emacs.d/var
+.emacs.d/.cask
+*~
+\#*
+*#
