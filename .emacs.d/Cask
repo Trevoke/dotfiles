@@ -2,6 +2,11 @@
 (source "marmalade" "http://marmalade-repo.org/packages/")
 (source "gnu" "http://elpa.gnu.org/packages/")
 
+(depends-on "[cl-struct-package-desc lorem-ipsum (20051013 1756) Insert dummy pseudo Latin text. [wiki] nil single melpa nil nil nil]")
+(depends-on "[cl-struct-package-desc moe-theme (20131026 150) A colorful eye-candy theme. Moe, moe, kyun! [github] nil tar melpa nil nil nil]")
+(depends-on "[cl-struct-package-desc molokai-theme (20130828 1600) molokai theme with Emacs theme engine [github] nil single melpa nil nil nil]")
+(depends-on "[cl-struct-package-desc org (20131028) Outline-based notes management and organizer nil tar gnu nil nil nil]")
+(depends-on "[cl-struct-package-desc org-bullets (20130226 1431) Show bullets in org-mode as UTF-8 characters [github] nil single melpa nil nil nil]")
 (depends-on "ag")
 (depends-on "bash-completion")
 (depends-on "bundler")
