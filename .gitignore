@@ -2,6 +2,7 @@
 .emacs.d/elpa
 .emacs.d/var
 .emacs.d/.cask
+.emacs.d/ido.*
 *~
 \#*
 *#
