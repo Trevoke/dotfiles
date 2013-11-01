@@ -1,3 +1,2 @@
 #!/bin/bash
-
-pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+pg_ctl -D ~/postgres -l ~/postgres/server.log start
