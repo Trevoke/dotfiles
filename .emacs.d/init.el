@@ -19,6 +19,8 @@
 
 (smex-initialize)
 
+(global-set-key "\C-m" 'newline-and-indent)
+
 ; put the backup files in there
 (setq backup-directory-alist '(("." . "~/.emacs.backups")))
 
@@ -46,9 +48,13 @@
 
 (require 'bundler)
 
-(add-hook 'enh-ruby-mode-hook 'projectile-mode)
-(add-hook 'enh-ruby-mode-hook 'robe-mode)
-(add-hook 'enh-ruby-mode-hook 'ruby-refactor-mode-launch)
+(defun my-ruby-mode-hook ()
+  (projectile-mode)
+  (robe-mode)
+  (ruby-refactor-mode-launch)
+  (local-set-key "\C-m" 'newline-and-indent))
+
+(add-hook 'enh-ruby-mode-hook 'my-ruby-mode-hook)
 (require 'ruby-end)
 
 (require 'vimrc-mode)
