@@ -2,10 +2,22 @@
 (cask-initialize)
 (require 'pallet)
 
-; Just give me emacs.
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(setq stag-emacs-init-file load-file-name)
+(setq stag-emacs-config-dir
+      (file-name-directory stag-emacs-init-file))
+
+(setq user-emacs-directory stag-emacs-config-dir)
+(setq stag-init-dir (concat stag-emacs-config-dir  "init.d"))
+
+
+(if (file-exists-p stag-init-dir)
+    (dolist (file (directory-files stag-init-dir t "\.el$"))
+      (load file)))
+
+(load-theme 'ujelly t)
+
+(defun stag-code-modes-hook ()
+  (linum-mode t))
 
 (require 'dynamic-fonts)
 (dynamic-fonts-setup)
@@ -19,54 +31,26 @@
 
 (smex-initialize)
 
-(global-set-key "\C-m" 'newline-and-indent)
-
-; put the backup files in there
-(setq backup-directory-alist '(("." . "~/.emacs.backups")))
-
-; Stop using the Meta key.
-(global-set-key "\C-x\C-m" 'execute-extended-command)
-
-(show-paren-mode t)
-(setq show-paren-delay 0)
-
-; Play nice with OS clipboard
-(setq x-select-enable-clipboard t)
-
-; Isn't bash supposed to be emacs-like or something?
-(global-set-key "\C-w" 'backward-kill-word)
-(global-set-key "\C-x\C-k" 'kill-region)
-
-; highlight current line
-(global-hl-line-mode t)
+(require 'smartparens-config)
 
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C--") 'er/contract-region)
 
-(load-theme 'ujelly t)
-
-; If only this didn't slow down startup so much
-; (rvm-use-default)
-
-(require 'bundler)
-
-(defun my-ruby-mode-hook ()
-  (projectile-mode)
-  (robe-mode)
-  (ruby-refactor-mode-launch)
-  (local-set-key "\C-m" 'newline-and-indent))
-
-(add-hook 'enh-ruby-mode-hook 'my-ruby-mode-hook)
-(require 'ruby-end)
-
 (require 'vimrc-mode)
 (add-to-list 'auto-mode-alist '(".vim\\(rc\\)?$" . vimrc-mode))
 (require 'gitconfig)
 
+(defun all-css-modes ()
+  (css-mode)
+  (rainbow-mode))
 
-(require 'slim-mode)
+(add-to-list 'auto-mode-alist '("\\.css$" . all-css-modes))
+(add-to-list 'auto-mode-alist '("\\.scss$" . all-css-modes))
+
 (require 'sass-mode)
+
+(require 'lorem-ipsum)
 
 (require 'elixir-mode)
 
@@ -80,7 +64,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("f89e21c3aef10d2825f2f079962c2237cd9a45f4dc1958091be8a6f5b69bb70c" "8020f88a6175dc3c79d53072c8c677a14a3d24fa165b740995bace5870ae9157" default))))
+    ("5c674d297206a2494eff9bf650a2ffbb8261d5a2ee77563b8a6530525fec5b6d" "f89e21c3aef10d2825f2f079962c2237cd9a45f4dc1958091be8a6f5b69bb70c" "8020f88a6175dc3c79d53072c8c677a14a3d24fa165b740995bace5870ae9157" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
