@@ -44,3 +44,4 @@
 (depends-on "ujelly-theme")
 (depends-on "vimrc-mode")
 (depends-on "web-mode")
+(depends-on "lorem-ipsum")
