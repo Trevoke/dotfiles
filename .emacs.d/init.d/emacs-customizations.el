@@ -12,6 +12,9 @@
 (show-paren-mode t)
 (setq show-paren-delay 0)
 
+; cursor moves down from real line to real line
+(setq line-move-visual nil);
+
 ; Play nice with OS clipboard
 (setq x-select-enable-clipboard t)
 
@@ -24,6 +27,9 @@
 
 ; tell me on what column the cursor is
 (setq column-number-mode t)
+
+; wrap at word
+(global-visual-line-mode t)
  
 (setq backup-directory-alist
       (list (cons "." (expand-file-name "backup" user-emacs-directory))))
