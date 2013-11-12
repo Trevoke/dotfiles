@@ -85,5 +85,5 @@ fi
 unset LS_VERSION
 unset OS_TYPE
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$HOME/.cask/bin:$PATH
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$HOME/.cask/bin:$PATH
