@@ -10,6 +10,8 @@
   (smartparens-mode)
   (stag-code-modes-hook)
   (auto-complete-mode)
+  (inf-ruby-minor-mode)
+  (rvm-activate-corresponding-ruby)
   (local-set-key "\C-m" 'newline-and-indent))
 
 (add-hook 'enh-ruby-mode-hook 'my-ruby-mode-hook)
