@@ -9,6 +9,7 @@
   (ruby-refactor-mode-launch)
   (smartparens-mode)
   (stag-code-modes-hook)
+  (auto-complete-mode)
   (local-set-key "\C-m" 'newline-and-indent))
 
 (add-hook 'enh-ruby-mode-hook 'my-ruby-mode-hook)
