@@ -3,6 +3,10 @@
 .emacs.d/var
 .emacs.d/.cask
 .emacs.d/ido.*
+.emacs.d/eshell/history
+.emacs.d/projectile-bookmarks.eld
+.emacs.d/ac-comphist.dat
+.emacs.d/url/
 *~
 \#*
 *#
