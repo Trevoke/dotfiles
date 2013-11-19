@@ -16,6 +16,7 @@
 
 (add-hook 'enh-ruby-mode-hook 'my-ruby-mode-hook)
 (add-to-list 'auto-mode-alist '("Guardfile" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . enh-ruby-mode))
 
 (require 'slim-mode)
