@@ -30,10 +30,19 @@
 
 ;; wrap at word
 (global-visual-line-mode t)
- 
+
+;; backup files in emacs config dir 
 (setq backup-directory-alist
       (list (cons "." (expand-file-name "backup" user-emacs-directory))))
+
+;; use ibuffer instead of default buffer
 
 (require 'ibuffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 (setq ibuffer-default-sorting-mode 'major-mode)
+
+;; make buffer names unique
+(require 'uniquify)
+(setq 
+  uniquify-buffer-name-style 'post-forward
+  uniquify-separator ":")
