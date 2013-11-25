@@ -1,10 +1,17 @@
+;; show me the scratch buffer instead of the splash screen
+(setq inhibit-splash-screen t)
+(setq initial-buffer-choice t)
+
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 (require 'pallet)
 
+;; Deal with OSX ass-hattery
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
+;; The next few lines set up auto-loading of config files
+;; below the init.d directory 
 (setq stag-emacs-init-file load-file-name)
 (setq stag-emacs-config-dir
       (file-name-directory stag-emacs-init-file))
@@ -12,15 +19,17 @@
 (setq user-emacs-directory stag-emacs-config-dir)
 (setq stag-init-dir (concat stag-emacs-config-dir  "init.d"))
 
-
 (if (file-exists-p stag-init-dir)
     (dolist (file (directory-files stag-init-dir t "\.el$"))
       (load file)))
 
+;; This shouldn't be required with Cask. Used to troubleshoot
+;; moe themes on my Gentoo laptop.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
-(defun stag-code-modes-hook ()
-  (linum-mode t))
+;; smart mode line
+(setq sml/theme 'dark)
+(sml/setup)
 
 ;; TODO remove this and see what changes
 (require 'dynamic-fonts)
@@ -46,33 +55,7 @@
 (add-to-list 'auto-mode-alist '(".vim\\(rc\\)?$" . vimrc-mode))
 (require 'gitconfig)
 
-(defun all-css-modes ()
-  (css-mode)
-  (rainbow-mode))
-
-(add-to-list 'auto-mode-alist '("\\.css$" . all-css-modes))
-(add-to-list 'auto-mode-alist '("\\.scss$" . all-css-modes))
-
-(require 'sass-mode)
-
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-
-(require 'lorem-ipsum)
-
 (require 'elixir-mode)
-
-(require 'bash-completion)
-(bash-completion-setup)
-
-(require 'auto-complete-config)
-(ac-config-default)
 
 ;; blindly copied
 (eval-after-load 'auto-complete
@@ -81,6 +64,9 @@
 
 (eval-after-load 'inf-ruby
   '(define-key inf-ruby-mode-map (kbd "TAB") 'auto-complete))
+
+(require 'auto-complete-config)
+(ac-config-default)
 
 (global-set-key (kbd "\C-c g") 'magit-status)
 
