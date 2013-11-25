@@ -18,7 +18,6 @@
       (load file)))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme 'moe-dark t)
 
 (defun stag-code-modes-hook ()
   (linum-mode t))
