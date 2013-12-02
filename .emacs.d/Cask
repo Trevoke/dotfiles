@@ -10,8 +10,6 @@
 (depends-on "bash-completion")
 (depends-on "bundler")
 (depends-on "cask")
-(depends-on "color-theme-railscasts")
-(depends-on "color-theme-solarized")
 (depends-on "dynamic-fonts")
 (depends-on "elixir-mode")
 (depends-on "enh-ruby-mode")
