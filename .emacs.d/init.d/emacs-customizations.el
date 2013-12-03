@@ -28,9 +28,6 @@
 ;; tell me on what column the cursor is
 (setq column-number-mode t)
 
-;; wrap at word
-(global-visual-line-mode t)
-
 ;; backup files in emacs config dir 
 (setq backup-directory-alist
       (list (cons "." (expand-file-name "backup" user-emacs-directory))))
