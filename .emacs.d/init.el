@@ -1,4 +1,4 @@
-;; show me the scratch buffer instead of the splash screen
+;; Don't show me the splash screen
 (setq inhibit-splash-screen t)
 
 (require 'cask "~/.cask/cask.el")
@@ -68,7 +68,6 @@
 (global-set-key (kbd "\C-c g") 'magit-status)
 
 (prefer-coding-system 'utf-8)
-(setq require-final-newline 'ask)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
