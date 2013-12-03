@@ -4,8 +4,6 @@
 
 (depends-on "ac-inf-ruby")
 (depends-on "ag")
-(depends-on "ample-theme")
-(depends-on "assemblage-theme")
 (depends-on "auto-complete")
 (depends-on "bash-completion")
 (depends-on "bundler")
