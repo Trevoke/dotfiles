@@ -6,11 +6,7 @@
 (require 'pallet)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'moe-light t)
-
-;; Deal with OSX ass-hattery
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+(load-theme 'mejelly t)
 
 ;; The next few lines set up auto-loading of config files
 ;; below the init.d directory 
@@ -25,11 +21,18 @@
     (dolist (file (directory-files stag-init-dir t "\.el$"))
       (load file)))
 
+;; If OSX, then add stuff to emacs' path.
+;; also re-enable the menu since it's in the top bar
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize)
+  (menu-bar-mode t))
+
 ;; smart mode line
 (setq sml/theme 'dark)
 (sml/setup)
 
-;; TODO remove this and see what changes
+(global-set-key (kbd "C-h z") 'zeal-at-point)
+
 (require 'dynamic-fonts)
 (dynamic-fonts-setup)
 
@@ -54,7 +57,7 @@
 
 (require 'elixir-mode)
 
-;; blindly copied
+;; blindly copied, not sure how to organize this.
 (eval-after-load 'auto-complete
   '(add-to-list 'ac-modes 'inf-ruby-mode))
 (add-hook 'inf-ruby-mode-hook 'ac-inf-ruby-enable)
@@ -75,7 +78,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(custom-safe-themes (quote ("9e7e1bd71ca102fcfc2646520bb2f25203544e7cc464a30c1cbd1385c65898f4" "92777c893be4ba0a3082a8c76ef840b892d3959fd652d3c97dce21167cdc5dcb" "2a7d3aa0e2abac5ff8cb297d890ea4ff0d602d3627d2228d97f2f353d2286f63" "7df5b36ef661649550614a15e9afb9d3e785706be6a577058f1b440dff1b03e3" "7a66d8386898f3372ba8b46b18e3ba0c2738976f8d8fc102bbb465686136ccd9" "db63ec50b032a270be91ad30a20301f52946a8b248a42c74ed83fe14491c3f80" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "30f861ee9dc270afc2a9962c05e02d600c998905433c8b9211dc2b33caa97c51" "a5fd8a2c36d619603c658916c381f80cc38ddb8e959f903cc8105fcc6cf5f968" "1177fe4645eb8db34ee151ce45518e47cc4595c3e72c55dc07df03ab353ad132" "0be7333e1d97d55b042f1e28c1b50b870ccc344c8af61bbd6a860e1c8ad9f883" "78eb32ca2bb2c2b71f3ea218d0d7d4260bdb50e64bc1e50451a310ddef48201b" "b2cf3c76acf10bd05cfcd7d3f924f4616c1504484de96be474594c62d59037ba" "70ed2f3b5419fdfd7012d1594773b92c0c0eba5a912a22624fc645f846c1118a" "74c5e4f755ed3d75c7ce9f3f08ea12124b01bbf513a551a40366f65c5d4a8a7a" "bb848b287a4e3162d63141cbacc64949e7dbeb41c944a0ba040785c285f5c9ba" "47583b577fb062aeb89d3c45689a4f2646b7ebcb02e6cb2d5f6e2790afb91a18" "847c431bd5eb5017b601f4c599fb4b23b096e48739e4a708f57ac756358751f0" "5c674d297206a2494eff9bf650a2ffbb8261d5a2ee77563b8a6530525fec5b6d" "f89e21c3aef10d2825f2f079962c2237cd9a45f4dc1958091be8a6f5b69bb70c" "8020f88a6175dc3c79d53072c8c677a14a3d24fa165b740995bace5870ae9157" default)))
+ '(custom-safe-themes
+   (quote
+    ("a77b40f749e8c3aaa4172c298e694eafe0030511470ff3406201c3915b811fa7" "67ccaa34f304fecf5b7e5a078f9b7106b0c3b8bc8ec83803d2cad935be875531" default)))
  '(line-number-mode nil)
  '(show-paren-mode t)
  '(tool-bar-mode nil))
@@ -84,4 +89,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 102 :width normal)))))
+ )
