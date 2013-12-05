@@ -14,6 +14,7 @@
 (add-hook 'enh-ruby-mode-hook 'my-ruby-mode-hook)
 (add-hook 'enh-ruby-mode-hook 'stag-code-modes-hook)
 (add-to-list 'auto-mode-alist '("Guardfile" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '(".pryrc" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . enh-ruby-mode))
 
