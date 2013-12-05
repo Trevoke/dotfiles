@@ -6,6 +6,7 @@
 (add-to-list 'auto-mode-alist '("\\.scss$" . all-css-modes))
 
 (require 'sass-mode)
+(require 'slim-mode)
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
