@@ -6,7 +6,7 @@
 (require 'pallet)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'railscasts t)
+(load-theme 'moe-light t)
 
 ;; Deal with OSX ass-hattery
 (when (memq window-system '(mac ns))
