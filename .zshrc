@@ -57,7 +57,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 setopt correct
 
 source ~/bin/zsh/gentoo-prompt
-export TERM=screen-256color
+# export TERM=screen-256color
 autoload -U colors && colors
 PROMPT=$(print "\n%{$fg[yellow]%}%D %*%{$reset_color%}\n%{$fg[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %2~ %# ")
 
