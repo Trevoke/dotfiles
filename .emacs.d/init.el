@@ -8,6 +8,12 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'mejelly t)
 
+(add-to-list 'load-path "~/.emacs.d/packages")
+(autoload 'mu-open "mu" "Play on MUSHes and MUDs" t)
+(add-hook 'mu-connection-mode-hook 'ansi-color-for-comint-mode-on)
+(custom-set-variables
+ '(mu-worlds (quote (["Discworld" "discworld.starturtle.net" 4242 "" ""]))))
+
 ;; The next few lines set up auto-loading of config files
 ;; below the init.d directory 
 (setq stag-emacs-init-file load-file-name)
