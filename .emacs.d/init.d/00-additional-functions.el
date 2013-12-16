@@ -6,5 +6,6 @@
 
 (defun stag-code-modes-hook ()
   (linum-mode t)
+  (company-mode)
   (add-hook 'before-save-hook 'whitespace-cleanup)
   (local-set-key "\C-m" 'newline-and-indent))

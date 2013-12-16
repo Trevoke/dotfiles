@@ -25,7 +25,7 @@
 
 ;; The Customize stuff is annoying in this file. Let's put it somewhere else.
 (setq custom-file
-      (concat stag-init-dir "init-custom.el"))
+      (concat stag-init-dir "/init-custom.el"))
 
 (if (file-exists-p stag-init-dir)
     (dolist (file (directory-files stag-init-dir t "\.el$"))
@@ -66,17 +66,6 @@
 (require 'gitconfig)
 
 (require 'elixir-mode)
-
-;; blindly copied, not sure how to organize this.
-(eval-after-load 'auto-complete
-  '(add-to-list 'ac-modes 'inf-ruby-mode))
-(add-hook 'inf-ruby-mode-hook 'ac-inf-ruby-enable)
-
-(eval-after-load 'inf-ruby
-  '(define-key inf-ruby-mode-map (kbd "TAB") 'auto-complete))
-
-(require 'auto-complete-config)
-(ac-config-default)
 
 (global-set-key (kbd "\C-c g") 'magit-status)
 
