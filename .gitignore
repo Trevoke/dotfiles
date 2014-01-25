@@ -9,6 +9,8 @@
 .emacs.d/ac-comphist.dat
 .emacs.d/url/
 .emacs.d/places
+.emacs.d/games
+.emacs.d/tramp
 *~
 \#*
 *#
