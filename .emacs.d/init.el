@@ -6,7 +6,7 @@
 (require 'pallet)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'mejelly t)
+;(load-theme 'mejelly t)
 
 (add-to-list 'load-path "~/.emacs.d/packages")
 (autoload 'mu-open "mu" "Play on MUSHes and MUDs" t)
@@ -35,6 +35,7 @@
 ;; also re-enable the menu since it's in the top bar
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize)
+  (setq ns-use-srgb-colorspace t)
   (menu-bar-mode t))
 
 ;; smart mode line
