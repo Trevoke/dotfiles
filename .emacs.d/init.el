@@ -25,7 +25,7 @@
 
 ;; The Customize stuff is annoying in this file. Let's put it somewhere else.
 (setq custom-file
-      (concat stag-init-dir "init-custom.el"))
+      (concat stag-init-dir "/init-custom.el"))
 
 (if (file-exists-p stag-init-dir)
     (dolist (file (directory-files stag-init-dir t "\.el$"))
