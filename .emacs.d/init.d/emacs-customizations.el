@@ -22,6 +22,8 @@
 (setq ibuffer-default-sorting-mode 'major-mode)
 
 ;; make buffer names unique
-(setq 
+(setq
   uniquify-buffer-name-style 'post-forward
   uniquify-separator ":")
+
+(setq-default dired-listing-switches "-alhv")
