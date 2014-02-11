@@ -11,6 +11,7 @@
 .emacs.d/places
 .emacs.d/games
 .emacs.d/tramp
+.emacs.d/init.d/init-custom.el
 *~
 \#*
 *#
