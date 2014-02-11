@@ -24,7 +24,7 @@ bindkey '\e[3;3~' delete-word
 
 cdpath=(. ~ ~/Documents/Code ~/Downloads)
 # Homebrew path
-export PATH=~/bin:$PATH:/usr/local/bin:/usr/local/sbin
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:/usr/local/share/npm/bin
 
 zstyle ':completion:*' completer _list _oldlist _expand _complete _ignored _correct _prefix
