@@ -15,7 +15,7 @@
  '(mu-worlds (quote (["Discworld" "discworld.starturtle.net" 4242 "" ""]))))
 
 ;; The next few lines set up auto-loading of config files
-;; below the init.d directory 
+;; below the init.d directory
 (setq stag-emacs-init-file load-file-name)
 (setq stag-emacs-config-dir
       (file-name-directory stag-emacs-init-file))
@@ -68,6 +68,10 @@
 
 (require 'elixir-mode)
 
+(require 'wgrep)
+(autoload 'wgrep-agp-setup "wgrep-ag")
+(add-hook 'ag-mode-hook 'wgrep-ag-setup)
+
 ;; blindly copied, not sure how to organize this.
 (eval-after-load 'auto-complete
   '(add-to-list 'ac-modes 'inf-ruby-mode))
@@ -82,4 +86,3 @@
 (global-set-key (kbd "\C-c g") 'magit-status)
 
 (prefer-coding-system 'utf-8)
-
