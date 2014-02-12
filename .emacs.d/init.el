@@ -23,13 +23,13 @@
 (setq user-emacs-directory stag-emacs-config-dir)
 (setq stag-init-dir (concat stag-emacs-config-dir  "init.d"))
 
-;; The Customize stuff is annoying in this file. Let's put it somewhere else.
-(setq custom-file
-      (concat stag-init-dir "/init-custom.el"))
-
 (if (file-exists-p stag-init-dir)
     (dolist (file (directory-files stag-init-dir t "\.el$"))
       (load file)))
+
+;; The Customize stuff is annoying in this file. Let's put it somewhere else.
+(setq custom-file
+      (concat stag-init-dir "/init-custom.el"))
 
 ;; If OSX, then add stuff to emacs' path.
 ;; also re-enable the menu since it's in the top bar
@@ -41,11 +41,6 @@
 ;; smart mode line
 (setq sml/theme 'dark)
 (sml/setup)
-
-(global-set-key (kbd "C-h z") 'zeal-at-point)
-
-(require 'dynamic-fonts)
-(dynamic-fonts-setup)
 
 (require 'flx-ido)
 (ido-mode 1)
@@ -84,5 +79,6 @@
 (ac-config-default)
 
 (global-set-key (kbd "\C-c g") 'magit-status)
+(global-set-key (kbd "C-h z") 'zeal-at-point)
 
 (prefer-coding-system 'utf-8)

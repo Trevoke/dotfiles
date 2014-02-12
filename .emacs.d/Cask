@@ -12,7 +12,6 @@
 (depends-on "cask")
 (depends-on "cucumber-goto-step")
 (depends-on "discover")
-(depends-on "dynamic-fonts")
 (depends-on "elixir-mode")
 (depends-on "enh-ruby-mode")
 (depends-on "epl")
