@@ -18,6 +18,7 @@
 (add-to-list 'auto-mode-alist '(".pryrc" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("config.ru" . enh-ruby-mode))
 
 (add-to-list 'inf-ruby-implementations '("pry" . "pry"))
 (setq inf-ruby-default-implementation "pry")
