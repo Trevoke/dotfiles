@@ -42,14 +42,17 @@
 (setq sml/theme 'dark)
 (sml/setup)
 
-(require 'flx-ido)
-(ido-mode 1)
-(ido-everywhere 1)
-(flx-ido-mode 1)
-;; disable ido faces to see flx highlights
-(setq ido-use-faces nil)
+;; (require 'flx-ido)
+;; (ido-mode 1)
+;; (ido-everywhere 1)
+;; (flx-ido-mode 1)
+;; ;; disable ido faces to see flx highlights
+;; (setq ido-use-faces nil)
+;;
+;; (smex-initialize)
 
-(smex-initialize)
+(helm-mode 1)
+(helm-match-plugin-mode)
 
 (require 'smartparens-config)
 
