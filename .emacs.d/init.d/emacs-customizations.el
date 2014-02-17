@@ -1,5 +1,5 @@
 ;; Stop using the Meta key.
-(global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key (kbd "C-x C-m") 'execute-extended-command)
 
 (show-paren-mode t)
 (setq show-paren-delay 0)
@@ -8,8 +8,8 @@
 (setq line-move-visual nil);
 
 ;; Isn't bash supposed to be emacs-like or something?
-(global-set-key "\C-w" 'backward-kill-word)
-(global-set-key "\C-x\C-k" 'kill-region)
+(global-set-key (kbd "C-w") 'backward-kill-word)
+(global-set-key (kbd "C-x C-k") 'kill-region)
 
 ;; highlight current line
 (global-hl-line-mode t)
@@ -27,3 +27,5 @@
   uniquify-separator ":")
 
 (setq-default dired-listing-switches "-alhv")
+
+(setq ring-bell-function 'ignore)

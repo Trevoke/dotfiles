@@ -42,17 +42,19 @@
 (setq sml/theme 'dark)
 (sml/setup)
 
-;; (require 'flx-ido)
-;; (ido-mode 1)
-;; (ido-everywhere 1)
-;; (flx-ido-mode 1)
-;; ;; disable ido faces to see flx highlights
-;; (setq ido-use-faces nil)
-;;
-;; (smex-initialize)
+(require 'flx-ido)
+(ido-mode 1)
+(ido-ubiquitous 1)
+(ido-vertical-mode 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights
+(setq ido-use-faces nil)
 
-(helm-mode 1)
-(helm-match-plugin-mode)
+(smex-initialize)
+
+;;(helm-mode 1)
+;;(helm-match-plugin-mode)
+;;(global-set-key (kbd "C-c p h") 'helm-projectile)
 
 (require 'smartparens-config)
 
