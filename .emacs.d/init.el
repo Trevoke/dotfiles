@@ -52,6 +52,7 @@
 
 (smex-initialize)
 (global-set-key (kbd "C-x C-m") 'smex)
+(global-set-key (kbd "C-x m") 'smex-major-mode-commands)
 
 ;;(helm-mode 1)
 ;;(helm-match-plugin-mode)
