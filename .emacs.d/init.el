@@ -51,6 +51,7 @@
 (setq ido-use-faces nil)
 
 (smex-initialize)
+(global-set-key (kbd "C-x C-m") 'smex)
 
 ;;(helm-mode 1)
 ;;(helm-match-plugin-mode)

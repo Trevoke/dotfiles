@@ -1,6 +1,3 @@
-;; Stop using the Meta key.
-(global-set-key (kbd "C-x C-m") 'execute-extended-command)
-
 (show-paren-mode t)
 (setq show-paren-delay 0)
 
