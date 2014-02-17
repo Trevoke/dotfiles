@@ -25,6 +25,7 @@
 (depends-on "git-rebase-mode")
 (depends-on "gitconfig")
 (depends-on "gitconfig-mode")
+(depends-on "guide-key")
 (depends-on "haskell-mode")
 (depends-on "ido-ubiquitous")
 (depends-on "ido-vertical-mode")

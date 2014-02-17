@@ -74,6 +74,10 @@
 (autoload 'wgrep-agp-setup "wgrep-ag")
 (add-hook 'ag-mode-hook 'wgrep-ag-setup)
 
+;; guide-key
+(setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-h" "C-c" "C-x" "C-x a" "C-x C-a" "C-x 8"))
+(guide-key-mode 1)
+
 ;; blindly copied, not sure how to organize this.
 (eval-after-load 'auto-complete
   '(add-to-list 'ac-modes 'inf-ruby-mode))
