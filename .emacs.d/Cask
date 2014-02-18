@@ -47,7 +47,6 @@
 (depends-on "rainbow-mode")
 (depends-on "robe")
 (depends-on "rspec-mode")
-(depends-on "ruby-block")
 (depends-on "ruby-hash-syntax")
 (depends-on "ruby-refactor")
 (depends-on "rvm")
