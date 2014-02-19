@@ -16,3 +16,5 @@
 \#*
 *#
 .netrwhist
+.vim/bundle
+!.vim/bundle/vundle/*

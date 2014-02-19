@@ -1,7 +1,68 @@
 " Confused? Remember that you can use :help <something>
 
-" Remember to call :Helptags to generate the vimhelpfiles
-call pathogen#infect() 
+" Vundle apparently requires this stuff, so we're going to
+" set them here and then unset them later
+
+filetype off
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-rvm'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/gem-browse'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-dispatch'
+
+Bundle 'pangloss/vim-javascript'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'vim-scripts/c.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'groenewege/vim-less'
+Bundle 'lukerandall/haskellmode-vim'
+Bundle 'vim-scripts/tintin.vim'
+Bundle 'klen/python-mode'
+Bundle 'elixir-lang/vim-elixir'
+
+Bundle 'sandeepravi/refactor-rails.vim'
+Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'scrooloose/syntastic'
+Bundle 'vitaly/vim-syntastic-coffee'
+Bundle 'vim-scripts/UltiSnips'
+Bundle 'Trevoke/ultisnips-rspec'
+Bundle 'vim-scripts/matchit.zip'
+Bundle 'vim-scripts/ruby-matchit'
+
+Bundle 'vim-scripts/ag.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'bling/vim-airline'
+Bundle 'vim-scripts/golden-ratio'
+Bundle 'jgdavey/tslime.vim'
+Bundle 'jgdavey/vim-turbux'
+Bundle 'fmoralesc/vim-pad'
+Bundle 'majutsushi/tagbar'
+Bundle 'fweep/vim-tabber'
+Bundle 'vim-scripts/Gundo'
+Bundle 'ervandew/supertab'
+
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'briancarper/gentooish.vim'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'Pychimp/vim-luna'
+
+" Now the actual configuration begins
 syntax on
 filetype plugin indent on
 
