@@ -54,10 +54,6 @@
 (global-set-key (kbd "C-x C-m") 'smex)
 (global-set-key (kbd "C-x m") 'smex-major-mode-commands)
 
-;;(helm-mode 1)
-;;(helm-match-plugin-mode)
-;;(global-set-key (kbd "C-c p h") 'helm-projectile)
-
 (require 'smartparens-config)
 
 (require 'expand-region)
@@ -93,3 +89,11 @@
 (global-set-key (kbd "C-h z") 'zeal-at-point)
 
 (prefer-coding-system 'utf-8)
+
+(require 'org-octopress)
+(setq org-octopress-directory-top       "~/devel/trevoke.github.io/source")
+(setq org-octopress-directory-posts     "~/devel/trevoke.github.io/source/_posts")
+(setq org-octopress-directory-org-top   "~/devel/trevoke.github.io/source")
+(setq org-octopress-directory-org-posts "~/devel/trevoke.github.io/source/blog")
+;; I don't know what that thing is right now.
+;;(setq org-octopress-setup-file          "~/org-sty/setupfile.org")

@@ -36,6 +36,7 @@
 (depends-on "magit-filenotify")
 (depends-on "moe-theme")
 (depends-on "org")
+(depends-on "org-octopress")
 (depends-on "pallet")
 (depends-on "paredit")
 (depends-on "pcre2el")
