@@ -59,7 +59,7 @@ setopt correct
 source ~/bin/zsh/gentoo-prompt
 # export TERM=screen-256color
 autoload -U colors && colors
-PROMPT=$(print "\n%{$fg[yellow]%}%D %*%{$reset_color%}\n%{$fg[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %2~ %# ")
+PROMPT=$(print "\n%{$fg_no_bold[yellow]%}%D %*%{$reset_color%}\n%{$fg_bold[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %2~ %# ")
 
 source ~/.profile
 
