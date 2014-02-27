@@ -33,6 +33,7 @@
 
 ;; If OSX, then add stuff to emacs' path.
 ;; also re-enable the menu since it's in the top bar
+;; and enable srgb
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize)
   (setq ns-use-srgb-colorspace t)
