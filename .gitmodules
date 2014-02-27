@@ -10,3 +10,6 @@
 [submodule "bin/git_chrono"]
 	path = bin/git_chrono
 	url = git://github.com/balefrost/git-chrono.git
+[submodule ".vim/bundle/vundle"]
+	path = .vim/bundle/vundle
+	url = git@github.com:gmarik/Vundle.vim.git
