@@ -50,7 +50,6 @@ Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/golden-ratio'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'jgdavey/vim-turbux'
-Bundle 'fmoralesc/vim-pad'
 Bundle 'majutsushi/tagbar'
 Bundle 'fweep/vim-tabber'
 Bundle 'vim-scripts/Gundo'
@@ -185,8 +184,6 @@ let g:tagbar_iconchars = ['▾', '▸']
 map <F4> :TagbarToggle<CR> 
 "build ctags with "F8"
 map <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
-let g:pad_dir = "~/Google\ Drive/vimpad"
 
 " "zz" now puts the line 10% above the middle of the screen instead of dead center
 if has('float')
