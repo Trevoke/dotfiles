@@ -11,6 +11,8 @@
 .emacs.d/places
 .emacs.d/games
 .emacs.d/tramp
+.emacs.d/.recentf
+.emacs.d/.saved-places
 .emacs.d/init.d/init-custom.el
 *~
 \#*

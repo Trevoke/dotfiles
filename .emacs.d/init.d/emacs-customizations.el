@@ -26,3 +26,6 @@
 (setq-default dired-listing-switches "-alhv")
 
 (setq ring-bell-function 'ignore)
+
+;; only type y or n when asked a question
+(fset 'yes-or-no-p 'y-or-n-p)
