@@ -12,6 +12,8 @@
 (depends-on "cask")
 (depends-on "clues-theme")
 (depends-on "color-theme-sanityinc-solarized")
+(depends-on "ctags")
+(depends-on "ctags-update")
 (depends-on "cucumber-goto-step")
 (depends-on "dash")
 (depends-on "discover")
