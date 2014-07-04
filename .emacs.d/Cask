@@ -31,6 +31,7 @@
 (depends-on "flappymacs")
 (depends-on "flx")
 (depends-on "flx-ido")
+(depends-on "font-utils")
 (depends-on "git-commit-mode")
 (depends-on "git-rebase-mode")
 (depends-on "gitconfig")
