@@ -1,6 +1,0 @@
-(setq tags-revert-without-query t)
-(setq large-file-warning-threshold 30000000)
-(setq tags-case-fold-search nil)
-(defvar ctags-command "/usr/local/bin/ctags -R ")
-(global-set-key (kbd "<f7>") 'ctags-create-or-update-tags-table)
-(global-set-key (kbd "s-b") 'ctags-search)
