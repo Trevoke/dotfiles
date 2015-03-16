@@ -4,5 +4,11 @@
 *.sw[op]
 tags
 doc/tags
+GPATH
+GTAGS
+GRTAGS
 cscope.files
 cscope.out
+.#*
+spec/fixtures/vcr_cassettes
+.idea/
