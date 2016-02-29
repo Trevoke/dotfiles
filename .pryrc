@@ -1,4 +1,4 @@
-Pry.config.pager = false
+
 # This is gonna break something, I know it.
 #Pry.config.editor = "emacsclient"
 #Pry.config.editor = -> { |file, line| "emacsclient #{file} +#{line}" }
@@ -12,3 +12,10 @@ Pry.config.pager = false
 # end
 #
 # Pry.config.input = Emacsable
+
+
+
+if ENV["EMACS"]
+  Pry.config.correct_indent = false
+  Pry.config.pager = false
+end
