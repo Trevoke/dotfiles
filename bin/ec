@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /usr/bin/env emacsclient -c -a "" $*
+exec /usr/bin/env emacsclient -c -a "" $* &
