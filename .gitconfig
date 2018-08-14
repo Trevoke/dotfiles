@@ -45,9 +45,9 @@
         ui = auto
 [init]
         templatedir = ~/.git_template
- [merge]
-        summary = true
- 	tool = diffmerge
+[merge]
+	summary = true
+	tool = diffmerge
 [diff]
 	tool = diffmerge
 [difftool "diffmerge"]
