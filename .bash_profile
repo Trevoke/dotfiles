@@ -1,5 +1,8 @@
+source ~/.profile
+source ~/.bashrc
 source ~/bin/bash/colors.sh
 source ~/bin/bash/git-completion.sh
+
 
 alias ls="ls -G"
 alias la="ls -a"
@@ -22,14 +25,14 @@ function relative_time_since_last_commit {
 function format_unit {
     local UNIT=$1
     case "$UNIT" in
-	seconds)    UNIT="s"    ;;
-	minutes)    UNIT="m"    ;;
-	hours)      UNIT="h"    ;;
-	days)       UNIT="d"    ;;
-	weeks)      UNIT="w"    ;;
-	months)     UNIT="mo"   ;;
-	years)      UNIT="yr"   ;;
-	*);;
+        seconds)    UNIT="s"    ;;
+        minutes)    UNIT="m"    ;;
+        hours)      UNIT="h"    ;;
+        days)       UNIT="d"    ;;
+        weeks)      UNIT="w"    ;;
+        months)     UNIT="mo"   ;;
+        years)      UNIT="yr"   ;;
+        *);;
     esac
     echo ${UNIT}
 }
@@ -37,11 +40,11 @@ function format_unit {
 function color_based_on_unit {
     local UNIT=$1
     if [ "$UNIT" == "s" ] || [ "$UNIT" == "m" ]; then
-	local COLOR=${TXTBLU}
+        local COLOR=${TXTBLU}
     elif [ "$UNIT" == "h" ]; then
-	local COLOR=${TXTYLW}
+        local COLOR=${TXTYLW}
     else
-	local COLOR=${TXTRED}
+        local COLOR=${TXTRED}
     fi
     echo ${COLOR}
 }
@@ -49,22 +52,22 @@ function color_based_on_unit {
 srb_git_prompt() {
     local g="$(__gitdir)"
     if [ -n "$g" ]; then
-	local SINCE_LAST_COMMIT=$(relative_time_since_last_commit)
-	SINCE_LAST_COMMIT=(${SINCE_LAST_COMMIT// / })
-	local VALUE=${SINCE_LAST_COMMIT[0]}
-	local UNIT=$(format_unit ${SINCE_LAST_COMMIT[1]/,/})
+        local SINCE_LAST_COMMIT=$(relative_time_since_last_commit)
+        SINCE_LAST_COMMIT=(${SINCE_LAST_COMMIT// / })
+        local VALUE=${SINCE_LAST_COMMIT[0]}
+        local UNIT=$(format_unit ${SINCE_LAST_COMMIT[1]/,/})
 
-	# for old projects, git reports years and months
-	if [ ${SINCE_LAST_COMMIT[2]} != "ago" ]; then
-	    local EXTRA_VALUE=${SINCE_LAST_COMMIT[2]}
-	    local EXTRA_UNIT=$(format_unit ${SINCE_LAST_COMMIT[3]/,/})
-	fi
+        # for old projects, git reports years and months
+        if [ ${SINCE_LAST_COMMIT[2]} != "ago" ]; then
+            local EXTRA_VALUE=${SINCE_LAST_COMMIT[2]}
+            local EXTRA_UNIT=$(format_unit ${SINCE_LAST_COMMIT[3]/,/})
+        fi
 
-	local COLOR=$(color_based_on_unit $UNIT)
-	local DELTA="${VALUE}${UNIT}${EXTRA_VALUE}${EXTRA_UNIT}"
+        local COLOR=$(color_based_on_unit $UNIT)
+        local DELTA="${VALUE}${UNIT}${EXTRA_VALUE}${EXTRA_UNIT}"
 
-	# The __git_ps1 function inserts the current git branch where %s is
-	echo `__git_ps1 "%s ${COLOR}∆${DELTA}"`
+        # The __git_ps1 function inserts the current git branch where %s is
+        echo `__git_ps1 "%s ${COLOR}∆${DELTA}"`
     fi
 }
 
@@ -104,11 +107,4 @@ TXTRST='\e[0m'    # Text Reset
 
 PS1="\[$TXTGRN\]\n\u:\w \[$BLDCYN\](\$(srb_git_prompt)\[$BLDCYN\])\[$TXTRST\] \n→ "
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-source ~/.profile
-source ~/.bashrc
-
 setxkbmap -option 'ctrl:nocaps'
-
-export NVM_DIR="/home/trevoke/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

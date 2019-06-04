@@ -5,8 +5,7 @@ case $- in
 esac
 
 echo "bashrc"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+
 PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 PATH=$HOME/.cask/bin:$PATH
 export GOPATH=$HOME/src/gocode
@@ -51,12 +50,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -126,3 +125,7 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 export GTAGSCONF="~/.globalrc"
 export GTAGSLABEL="ctags"
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
