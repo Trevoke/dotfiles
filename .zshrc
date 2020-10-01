@@ -1,7 +1,3 @@
-# Bah humbug at Gentoo
-# And if you know me and you laughed reading this,
-# bah humbug at you too.
-#unset RUBYOPT
 
 # number of lines kept in history
 export HISTSIZE=10000
@@ -22,12 +18,11 @@ bindkey '\e[1;3C' emacs-forward-word
 bindkey '\e[3~' delete-char
 bindkey '\e[3;3~' delete-word
 
-cdpath=(. ~ ~/Documents/Code ~/Downloads)
 # Homebrew path
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:/usr/local/share/npm/bin
 
-zstyle ':completion:*' completer _list _oldlist _expand _complete _ignored _correct _prefix
+zstyle ':completion:*' completer _oldlist _expand _complete _ignored _correct _prefix
 zstyle ':completion:*' completions 1
 zstyle ':completion:*' expand prefix suffix
 zstyle ':completion:*' file-sort access
@@ -49,6 +44,9 @@ zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
 zstyle :compinstall filename '~/.zshrc'
 
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+
 autoload -Uz compinit
 compinit
 
@@ -66,8 +64,19 @@ source ~/.profile
 OS_TYPE=`uname -s`
 if [[ $OS_TYPE == 'Linux' ]]; then
   setxkbmap -option 'ctrl:nocaps'
-elif [[ $OS_TYPE == 'Darwin' ]]; then 
+elif [[ $OS_TYPE == 'Darwin' ]]; then
 fi
+
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats '%b'
+
+# Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+RPROMPT=\$vcs_info_msg_0_
 
 
 alias l="ls"
@@ -87,3 +96,5 @@ unset OS_TYPE
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$HOME/.cask/bin:$PATH
+
+. $HOME/.asdf/asdf.sh
