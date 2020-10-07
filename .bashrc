@@ -5,11 +5,9 @@ case $- in
 esac
 
 echo "bashrc"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 PATH=$HOME/.cask/bin:$PATH
-export GOPATH=$HOME/src/gocode
+GOPATH=$HOME/src/gocode
 PATH=$PATH:$GOPATH/bin
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -126,3 +124,6 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 export GTAGSCONF="~/.globalrc"
 export GTAGSLABEL="ctags"
+
+export PATH="$HOME/.yarn/bin:$PATH"
+
