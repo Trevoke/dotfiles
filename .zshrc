@@ -1,4 +1,3 @@
-
 # number of lines kept in history
 export HISTSIZE=10000
 # number of lines saved in the history after logout
@@ -63,7 +62,7 @@ source ~/.profile
 
 OS_TYPE=`uname -s`
 if [[ $OS_TYPE == 'Linux' ]]; then
-  setxkbmap -option 'ctrl:nocaps'
+    setxkbmap -option 'ctrl:nocaps'
 elif [[ $OS_TYPE == 'Darwin' ]]; then
 fi
 
@@ -86,9 +85,9 @@ alias g="git status"
 
 LS_VERSION=`man ls -P cat | tail -1 | cut -d' ' -f 1`
 if [[  $LS_VERSION == 'GNU' ]]; then
-  alias ls="ls --color"
+    alias ls="ls --color"
 elif [[ $LS_VERSION == 'BSD' ]]; then
-  alias ls="ls -G"
+    alias ls="ls -G"
 fi
 
 unset LS_VERSION
