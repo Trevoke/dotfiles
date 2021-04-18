@@ -8,8 +8,10 @@ echo "bashrc"
 
 PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 PATH=$HOME/.cask/bin:$PATH
-export GOPATH=$HOME/src/gocode
+GOPATH=$HOME/src/gocode
 PATH=$PATH:$GOPATH/bin
+
+export PATH="$HOME/.yarn/bin:$PATH"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
