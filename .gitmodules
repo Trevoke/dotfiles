@@ -4,9 +4,6 @@
 [submodule ".vim/bundle/turbux"]
 	path = .vim/bundle/turbux
 	url = https://github.com/jgdavey/vim-turbux.git
-[submodule ".tmux/tmux-solarized"]
-	path = .tmux/tmux-solarized
-	url = git://github.com/seebi/tmux-colors-solarized.git
 [submodule "bin/git_chrono"]
 	path = bin/git_chrono
 	url = git://github.com/balefrost/git-chrono.git
