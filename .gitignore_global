@@ -13,3 +13,4 @@ cscope.out
 spec/fixtures/vcr_cassettes
 .idea/
 .tern-port
+.elixir_ls/
