@@ -108,3 +108,6 @@ TXTRST='\e[0m'    # Text Reset
 PS1="\[$TXTGRN\]\n\u:\w \[$BLDCYN\](\$(srb_git_prompt)\[$BLDCYN\])\[$TXTRST\] \n→ "
 
 setxkbmap -option 'ctrl:nocaps'
+. "$HOME/.cargo/env"
+
+if [ -e /home/stag/.nix-profile/etc/profile.d/nix.sh ]; then . /home/stag/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

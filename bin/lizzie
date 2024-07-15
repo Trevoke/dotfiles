@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/src/vendor/Lizzie-improvements
+nohup java -jar target/lizzie-0.7.3-shaded.jar &

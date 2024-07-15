@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /home/stag/src/vendor/lizzie-gcloud-setup
+scripts/stop-instance.sh

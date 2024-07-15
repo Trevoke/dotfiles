@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /home/stag/src/vendor/lizzie-gcloud-setup
+scripts/start-instance.sh

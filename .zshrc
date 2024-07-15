@@ -1,4 +1,4 @@
-# number of lines kept in history
+#number of lines kept in history
 export HISTSIZE=10000
 # number of lines saved in the history after logout
 export SAVEHIST=10000
@@ -20,6 +20,7 @@ bindkey '\e[3;3~' delete-word
 # Homebrew path
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:/usr/local/share/npm/bin
+export PATH="/home/stag/.evm/bin:$PATH"
 
 zstyle ':completion:*' completer _oldlist _expand _complete _ignored _correct _prefix
 zstyle ':completion:*' completions 1
@@ -101,12 +102,21 @@ export PATH="$PATH:$HOME/.dotnet/tools/"
 
 export DOCKER_BUILDKIT=1
 
-export FLYCTL_INSTALL="/home/trevoke/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
-
 # Nix
 if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
   . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
 fi
 # End Nix
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/stag/usr/google-cloud-sdk/path.zsh.inc' ]; then . '/home/stag/usr/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/stag/usr/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/stag/usr/google-cloud-sdk/completion.zsh.inc'; fi
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+export FLYCTL_INSTALL="/home/stag/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+export PATH="/home/stag/.evm/bin:$PATH"
+
+export PATH="/home/stag/src/vendor/zig-linux-x86_64-0.10.1:$PATH"

@@ -131,3 +131,4 @@ export GTAGSLABEL="ctags"
 . $HOME/.asdf/asdf.sh
 
 . $HOME/.asdf/completions/asdf.bash
+. "$HOME/.cargo/env"

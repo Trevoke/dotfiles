@@ -1,4 +1,3 @@
 #!/bin/bash
 
-java -jar ~/usr/kgs/cgoban.jar
-#java /home/alg/Software/KGS/cgoban-nfa.jnlp
+java -jar ~/games/kgs/cgoban.jar

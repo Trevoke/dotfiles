@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd ~/usr/katrain
+source venv/bin/activate
+python -m katrain

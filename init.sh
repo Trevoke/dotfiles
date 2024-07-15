@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path=$HOME/src/projects/dotfiles
+path=$(pwd)
 
 touch $HOME/.profile
 
