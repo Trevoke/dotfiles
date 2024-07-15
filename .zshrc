@@ -120,3 +120,6 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 export PATH="/home/stag/.evm/bin:$PATH"
 
 export PATH="/home/stag/src/vendor/zig-linux-x86_64-0.10.1:$PATH"
+export PATH="/opt/cuda/bin:$PATH"
+
+source ~/.shell-secrets

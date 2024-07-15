@@ -1,3 +1,5 @@
 #!/bin/bash
 
-GDK_BACKEND=x11 nohup lutris &
+#source /home/stag/src/python-environments/lutris/bin/activate
+
+WEBKIT_DISABLE_COMPOSITING_MODE=1 ENABLE_DEVICE_CHOOSER_LAYER=1 VULKAN_DEVICE_INDEX=0 GDK_BACKEND=x11 /usr/bin/python3 /usr/bin/lutris
