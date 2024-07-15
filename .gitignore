@@ -20,3 +20,4 @@
 .netrwhist
 .vim/bundle/*
 nohup.out
+bin/nextcloud

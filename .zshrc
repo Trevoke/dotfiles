@@ -56,7 +56,7 @@ setopt correct
 source ~/bin/zsh/gentoo-prompt
 # export TERM=screen-256color
 autoload -U colors && colors
-PROMPT=$(print "\n%{$fg_no_bold[yellow]%}%D %*%{$reset_color%}\n%{$fg_bold[blue]%}%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %2~ %# ")
+PROMPT=$(print "\n%{$fg_no_bold[yellow]%}%D %*%{$reset_color%}\n%F{147}%n%f%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%} %2~ %# ")
 
 source ~/.profile
 
@@ -97,3 +97,16 @@ export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$HOME/.cask/bin:$PATH
 
 . $HOME/.asdf/asdf.sh
+export PATH="$PATH:$HOME/.dotnet/tools/"
+
+export DOCKER_BUILDKIT=1
+
+export FLYCTL_INSTALL="/home/trevoke/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
