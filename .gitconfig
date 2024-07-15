@@ -32,6 +32,7 @@
         default = current
 [pull]
         default = current
+	rebase = false
 [core]
         excludesfile = ~/.gitignore_global
         editor = vim
@@ -45,6 +46,7 @@
         ui = auto
 [init]
         templatedir = ~/.git_template
+	defaultBranch = congruence
 [merge]
 	summary = true
 	tool = diffmerge

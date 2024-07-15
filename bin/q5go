@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+nohup ~/usr/q5go/bin/q5go &

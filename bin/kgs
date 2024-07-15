@@ -1,3 +1,4 @@
 #!/bin/bash
 
-javaws /home/alg/Software/KGS/cgoban-nfa.jnlp
+java -jar ~/usr/kgs/cgoban.jar
+#java /home/alg/Software/KGS/cgoban-nfa.jnlp
